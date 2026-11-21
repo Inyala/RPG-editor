@@ -1,0 +1,17 @@
+RPG ÉDITEUR — éditeur pour le moteur RPG-HTML (PC + mobile, aucun serveur ni installation)
+Ouvrir : double-clic sur index.html (ou hébergez le dossier). Bouton « Ouvrir » : RPG.zip ou un .rpgproj.
+Exporter : « .zip » = le jeu complet (même structure que l'original, prêt à lancer) ; « .rpgproj » = idem + manifeste (format projet de l'éditeur).
+Les deux se réimportent. Les fichiers non modifiés (images, sons) sont recopiés sans recompression : export rapide.
+
+FICHIERS
+ js/zip.js      lecture/écriture ZIP (sans bibliothèque)      js/project.js  projet : chargement, images, export
+ js/maps.js     éditeur de cartes, palette, propriétés         js/events.js   éditeur d'événements (pages, conditions, commandes)
+ js/data.js     base de données (JSON par entrée)              js/app.js      onglets, ouverture, export
+ css/editor.css style (responsive mobile)
+Pour ajouter une commande d'événement : une ligne dans CMD (events.js) + son « case » dans exec de Script/map.js du jeu.
+
+OUVERTURE AUTOMATIQUE : placez votre projet à côté de index.html sous le nom projet.rpgproj (ou RPG.zip) : il s'ouvre tout seul.
+Sinon l'éditeur rouvre le dernier projet ouvert + vos modifications (brouillon sauvegardé dans le navigateur). Exportez pour obtenir le fichier final.
+▶ Jouer / ▶ Ici : teste le jeu avec vos modifications sans exporter (▶ Ici démarre sur la dernière case touchée). js/play.js
+Ouverture auto : le projet est lu par morceaux (requêtes HTTP Range), jamais chargé en entier. Si votre serveur local ne gère pas Range, utilisez « Ouvrir ».
+Les projets de plus de 80 Mo ne sont pas recopiés dans la mémoire du navigateur (évite les plantages) : rouvrez-les via « Ouvrir » ou projet.rpgproj ; le brouillon est proposé à la restauration.
