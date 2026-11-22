@@ -1,0 +1,113 @@
+{
+ "aeli": {
+  "n": "Aël",
+  "face": [
+   "Actor1",
+   0
+  ],
+  "ch": [
+   "Actor1",
+   0
+  ],
+  "b": {
+   "hp": 110,
+   "mp": 20,
+   "atk": 14,
+   "def": 8,
+   "mat": 6,
+   "spd": 9
+  },
+  "g": {
+   "hp": 17,
+   "mp": 3,
+   "atk": 3,
+   "def": 2,
+   "mat": 1,
+   "spd": 1
+  },
+  "sk": {
+   "1": "slash",
+   "3": "power",
+   "6": "cross"
+  },
+  "eq": {
+   "w": "sword1",
+   "a": "tunic"
+  }
+ },
+ "lyra": {
+  "n": "Lyra",
+  "face": [
+   "Actor1",
+   3
+  ],
+  "ch": [
+   "Actor1",
+   3
+  ],
+  "b": {
+   "hp": 80,
+   "mp": 45,
+   "atk": 6,
+   "def": 5,
+   "mat": 15,
+   "spd": 8
+  },
+  "g": {
+   "hp": 11,
+   "mp": 7,
+   "atk": 1,
+   "def": 1,
+   "mat": 3,
+   "spd": 1
+  },
+  "sk": {
+   "1": "fire",
+   "2": "heal",
+   "4": "ice",
+   "5": "healall",
+   "7": "bolt",
+   "9": "meteor"
+  },
+  "eq": {
+   "w": "staff",
+   "a": "robe"
+  }
+ },
+ "kael": {
+  "n": "Kael",
+  "face": [
+   "Actor2",
+   2
+  ],
+  "ch": [
+   "Actor2",
+   2
+  ],
+  "b": {
+   "hp": 95,
+   "mp": 25,
+   "atk": 12,
+   "def": 6,
+   "mat": 5,
+   "spd": 14
+  },
+  "g": {
+   "hp": 14,
+   "mp": 3,
+   "atk": 3,
+   "def": 1,
+   "mat": 1,
+   "spd": 2
+  },
+  "sk": {
+   "1": "quick",
+   "3": "venom",
+   "6": "power"
+  },
+  "eq": {
+   "w": "dagger",
+   "a": "tunic"
+  }
+ }
+}

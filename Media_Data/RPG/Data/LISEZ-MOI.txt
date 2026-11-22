@@ -1,0 +1,16 @@
+DATA — la base de données du jeu (JSON)
+Un fichier JSON = un objet {"identifiant": {...}}. Ajoutez une entrée = ajoutez un élément au jeu.
+Attention aux virgules entre entrées et à la dernière (pas de virgule finale).
+
+system.json   title, start {map,x,y,dir 0bas 1gauche 2droite 3haut}, party [ids héros], gold, items {objet:quantité},
+              bgm {title,battle,boss}, titleBg (image Graphics/Titles1/...), sheets (feuilles de tuiles),
+              maps [ids des fichiers Map/*.json], legend (caractère -> [feuille, tuile, bloquant 1/0]).
+actors.json   n nom, face/ch ["Fichier", n°0-7] (Graphics/Faces et Characters), b stats niveau 1, g gain/niveau,
+              sk {niveau:"compétence"}, eq {w arme, a armure, x accessoire}.
+items.json    n, ico (n° d'icône de System/IconSet, 24px, 16 par ligne), t (c consommable, w arme, a armure,
+              x accessoire, k objet clé), hp/mp (soins), cure (soigne poison), rev (réanime), b {atk,def,mat,spd,hp,mp}, price, d.
+skills.json   type phys|mag|heal, pow (puissance), mp, tgt one|all|ally|allies, el (fire/ice/thunder),
+              hits, st "psn" + ch (% de chance), ani (Graphics/Animations), se (Audio/SE), ico.
+enemies.json  img (Graphics/Battlers), hp atk def mat spd, exp, gold, acts [compétences utilisées],
+              el {fire:1.5, ice:0.5, thunder:0 ...} multiplicateurs, drops [["objet", % de chance]].
+troops.json   {"groupe":{"e":["ennemi","ennemi"]}} — utilisés par les événements et les rencontres.

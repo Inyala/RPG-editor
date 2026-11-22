@@ -1,0 +1,176 @@
+{
+ "potion": {
+  "n": "Potion",
+  "ico": 212,
+  "t": "c",
+  "hp": 80,
+  "price": 30,
+  "d": "Restaure 80 PV."
+ },
+ "hipotion": {
+  "n": "Grande potion",
+  "ico": 209,
+  "t": "c",
+  "hp": 250,
+  "price": 120,
+  "d": "Restaure 250 PV."
+ },
+ "ether": {
+  "n": "Éther",
+  "ico": 213,
+  "t": "c",
+  "mp": 30,
+  "price": 80,
+  "d": "Restaure 30 PM."
+ },
+ "antidote": {
+  "n": "Antidote",
+  "ico": 211,
+  "t": "c",
+  "cure": 1,
+  "price": 20,
+  "d": "Soigne le poison."
+ },
+ "feather": {
+  "n": "Plume de phénix",
+  "ico": 215,
+  "t": "c",
+  "rev": 1,
+  "price": 200,
+  "d": "Réanime un allié à moitié de ses PV."
+ },
+ "key": {
+  "n": "Clé rouillée",
+  "ico": 167,
+  "t": "k",
+  "d": "Ouvre la porte de la Caverne des Cendres."
+ },
+ "sword1": {
+  "n": "Épée de fer",
+  "ico": 147,
+  "t": "w",
+  "b": {
+   "atk": 6
+  },
+  "price": 120,
+  "d": "Une épée solide. ATQ +6"
+ },
+ "sword2": {
+  "n": "Lame d’acier",
+  "ico": 148,
+  "t": "w",
+  "b": {
+   "atk": 12,
+   "spd": 1
+  },
+  "price": 340,
+  "d": "Lame bien équilibrée. ATQ +12 VIT +1"
+ },
+ "dagger": {
+  "n": "Dague",
+  "ico": 150,
+  "t": "w",
+  "b": {
+   "atk": 4,
+   "spd": 3
+  },
+  "price": 90,
+  "d": "Légère et rapide. ATQ +4 VIT +3"
+ },
+ "staff": {
+  "n": "Bâton de chêne",
+  "ico": 152,
+  "t": "w",
+  "b": {
+   "mat": 6
+  },
+  "price": 130,
+  "d": "Canalise la magie. MAG +6"
+ },
+ "tunic": {
+  "n": "Tunique de cuir",
+  "ico": 168,
+  "t": "a",
+  "b": {
+   "def": 4
+  },
+  "price": 70,
+  "d": "DÉF +4"
+ },
+ "mail": {
+  "n": "Cotte de mailles",
+  "ico": 169,
+  "t": "a",
+  "b": {
+   "def": 9
+  },
+  "price": 260,
+  "d": "DÉF +9"
+ },
+ "robe": {
+  "n": "Robe de mage",
+  "ico": 171,
+  "t": "a",
+  "b": {
+   "def": 3,
+   "mat": 4
+  },
+  "price": 150,
+  "d": "DÉF +3 MAG +4"
+ },
+ "ring": {
+  "n": "Anneau de force",
+  "ico": 176,
+  "t": "x",
+  "b": {
+   "atk": 4,
+   "def": 2
+  },
+  "price": 200,
+  "d": "ATQ +4 DÉF +2"
+ },
+ "stone": {
+  "n": "Pierre de rappel",
+  "ico": 188,
+  "t": "k",
+  "go": {
+   "map": "camp",
+   "x": 6,
+   "y": 7,
+   "dir": 3
+  },
+  "d": "Vous ramène à votre tente, où que vous soyez."
+ },
+ "scroll": {
+  "n": "Parchemin de la légende",
+  "ico": 232,
+  "t": "u",
+  "ev": [
+   [
+    "say",
+    "",
+    "Un vieux parchemin… Il parle d’un dragon endormi sous les cendres."
+   ]
+  ],
+  "d": "Réutilisable : relit la légende."
+ },
+ "elixir": {
+  "n": "Élixir étrange",
+  "ico": 220,
+  "t": "c",
+  "hp": 50,
+  "ev": [
+   [
+    "say",
+    "",
+    "Une chaleur vous envahit…"
+   ],
+   [
+    "xp",
+    20
+   ]
+  ],
+  "price": 100,
+  "d": "Soigne 50 PV puis donne 20 XP."
+ }
+}

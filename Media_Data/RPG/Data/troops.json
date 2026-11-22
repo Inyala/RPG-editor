@@ -1,0 +1,117 @@
+{
+ "t1": {
+  "e": [
+   "slime",
+   "slime"
+  ]
+ },
+ "t2": {
+  "e": [
+   "rat",
+   "slime",
+   "rat"
+  ]
+ },
+ "t3": {
+  "e": [
+   "bat",
+   "bat"
+  ]
+ },
+ "t4": {
+  "e": [
+   "snake",
+   "rat"
+  ]
+ },
+ "c1": {
+  "e": [
+   "skeleton",
+   "ghost"
+  ]
+ },
+ "c2": {
+  "e": [
+   "bat",
+   "bat",
+   "bat"
+  ]
+ },
+ "c3": {
+  "e": [
+   "willowisp",
+   "skeleton"
+  ]
+ },
+ "c4": {
+  "e": [
+   "ghost",
+   "ghost",
+   "zombie"
+  ]
+ },
+ "boss": {
+  "e": [
+   "dragon"
+  ]
+ },
+ "f1": {
+  "e": [
+   "spider",
+   "hornet"
+  ]
+ },
+ "f2": {
+  "e": [
+   "plant",
+   "plant",
+   "hornet"
+  ]
+ },
+ "f3": {
+  "e": [
+   "bandit",
+   "bandit"
+  ]
+ },
+ "f4": {
+  "e": [
+   "werewolf"
+  ]
+ },
+ "ogre": {
+  "e": [
+   "ogre"
+  ]
+ },
+ "mino": {
+  "e": [
+   "minotaur"
+  ]
+ },
+ "k1": {
+  "e": [
+   "ghost",
+   "ghost",
+   "willowisp"
+  ]
+ },
+ "k2": {
+  "e": [
+   "skeleton",
+   "skeleton"
+  ]
+ },
+ "k3": {
+  "e": [
+   "zombie",
+   "willowisp",
+   "ghost"
+  ]
+ },
+ "groupe1": {
+  "e": [
+   "monstre1"
+  ]
+ }
+}

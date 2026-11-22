@@ -1,0 +1,197 @@
+{
+ "attack": {
+  "n": "Attaquer",
+  "type": "phys",
+  "pow": 1,
+  "tgt": "one",
+  "ani": "Attack1",
+  "se": "Attack1"
+ },
+ "slash": {
+  "n": "Entaille",
+  "mp": 4,
+  "ico": 147,
+  "type": "phys",
+  "pow": 1.5,
+  "tgt": "one",
+  "ani": "Sword1",
+  "se": "Slash1"
+ },
+ "power": {
+  "n": "Coup puissant",
+  "mp": 8,
+  "ico": 144,
+  "type": "phys",
+  "pow": 2.2,
+  "tgt": "one",
+  "ani": "Sword5",
+  "se": "Slash5"
+ },
+ "cross": {
+  "n": "Croix lumineuse",
+  "mp": 14,
+  "ico": 102,
+  "type": "phys",
+  "pow": 1.4,
+  "tgt": "all",
+  "ani": "Light3",
+  "se": "Saint1"
+ },
+ "quick": {
+  "n": "Double lame",
+  "mp": 5,
+  "ico": 150,
+  "type": "phys",
+  "pow": 0.9,
+  "hits": 2,
+  "tgt": "one",
+  "ani": "Sword3",
+  "se": "Slash3"
+ },
+ "venom": {
+  "n": "Lame empoisonnée",
+  "mp": 6,
+  "ico": 211,
+  "type": "phys",
+  "pow": 1,
+  "st": "psn",
+  "ch": 80,
+  "tgt": "one",
+  "ani": "Sword2",
+  "se": "Poison"
+ },
+ "fire": {
+  "n": "Feu",
+  "mp": 5,
+  "ico": 96,
+  "type": "mag",
+  "pow": 1.4,
+  "el": "fire",
+  "tgt": "one",
+  "ani": "Fire1",
+  "se": "Fire1"
+ },
+ "ice": {
+  "n": "Glace",
+  "mp": 5,
+  "ico": 97,
+  "type": "mag",
+  "pow": 1.4,
+  "el": "ice",
+  "tgt": "one",
+  "ani": "Ice1",
+  "se": "Ice1"
+ },
+ "bolt": {
+  "n": "Foudre",
+  "mp": 9,
+  "ico": 98,
+  "type": "mag",
+  "pow": 1.8,
+  "el": "thunder",
+  "tgt": "one",
+  "ani": "Thunder1",
+  "se": "Thunder1"
+ },
+ "meteor": {
+  "n": "Météore",
+  "mp": 22,
+  "ico": 110,
+  "type": "mag",
+  "pow": 1.7,
+  "el": "fire",
+  "tgt": "all",
+  "ani": "Meteor",
+  "se": "Explosion3"
+ },
+ "heal": {
+  "n": "Soin",
+  "mp": 4,
+  "ico": 123,
+  "type": "heal",
+  "pow": 3.2,
+  "tgt": "ally",
+  "ani": "Heal1",
+  "se": "Heal1"
+ },
+ "healall": {
+  "n": "Soin de groupe",
+  "mp": 12,
+  "ico": 126,
+  "type": "heal",
+  "pow": 2.4,
+  "tgt": "allies",
+  "ani": "Heal3",
+  "se": "Heal3"
+ },
+ "acid": {
+  "n": "Acide",
+  "type": "phys",
+  "pow": 0.9,
+  "st": "psn",
+  "ch": 40,
+  "tgt": "one",
+  "ani": "Blow1",
+  "se": "Bite"
+ },
+ "bite": {
+  "n": "Morsure",
+  "type": "phys",
+  "pow": 1.1,
+  "tgt": "one",
+  "ani": "Attack1",
+  "se": "Bite"
+ },
+ "fang": {
+  "n": "Crochet venimeux",
+  "type": "phys",
+  "pow": 1,
+  "st": "psn",
+  "ch": 70,
+  "tgt": "one",
+  "ani": "Blow1",
+  "se": "Bite"
+ },
+ "smash": {
+  "n": "Coup d’os",
+  "type": "phys",
+  "pow": 1.4,
+  "tgt": "one",
+  "ani": "Blow2",
+  "se": "Blow2"
+ },
+ "curse": {
+  "n": "Malédiction",
+  "type": "mag",
+  "pow": 1.2,
+  "tgt": "one",
+  "ani": "Darkness1",
+  "se": "Darkness1"
+ },
+ "flame": {
+  "n": "Flamme",
+  "type": "mag",
+  "pow": 1.1,
+  "el": "fire",
+  "tgt": "one",
+  "ani": "Fire1",
+  "se": "Fire2"
+ },
+ "claw": {
+  "n": "Griffe",
+  "type": "phys",
+  "pow": 1.5,
+  "tgt": "one",
+  "ani": "Attack4",
+  "se": "Slash2"
+ },
+ "breath": {
+  "n": "Souffle ardent",
+  "type": "mag",
+  "pow": 1,
+  "el": "fire",
+  "tgt": "all",
+  "ani": "Fire2",
+  "se": "Fire5"
+ }
+}

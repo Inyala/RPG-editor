@@ -1,0 +1,414 @@
+{
+ "slime": {
+  "n": "Gelée",
+  "img": "Slime",
+  "hp": 28,
+  "atk": 9,
+  "def": 3,
+  "mat": 4,
+  "spd": 6,
+  "exp": 8,
+  "gold": 10,
+  "acts": [
+   "attack",
+   "acid"
+  ],
+  "drops": [
+   [
+    "potion",
+    25
+   ]
+  ]
+ },
+ "rat": {
+  "n": "Rat",
+  "img": "Rat",
+  "hp": 22,
+  "atk": 10,
+  "def": 2,
+  "mat": 2,
+  "spd": 10,
+  "exp": 7,
+  "gold": 7,
+  "acts": [
+   "attack",
+   "attack",
+   "bite"
+  ],
+  "drops": []
+ },
+ "bat": {
+  "n": "Chauve-souris",
+  "img": "Bat",
+  "hp": 24,
+  "atk": 11,
+  "def": 3,
+  "mat": 3,
+  "spd": 12,
+  "exp": 9,
+  "gold": 9,
+  "acts": [
+   "attack",
+   "fang"
+  ],
+  "el": {
+   "thunder": 1.5
+  },
+  "drops": [
+   [
+    "antidote",
+    20
+   ]
+  ]
+ },
+ "snake": {
+  "n": "Serpent",
+  "img": "Snake",
+  "hp": 38,
+  "atk": 13,
+  "def": 5,
+  "mat": 4,
+  "spd": 8,
+  "exp": 13,
+  "gold": 14,
+  "acts": [
+   "attack",
+   "fang"
+  ],
+  "drops": [
+   [
+    "antidote",
+    30
+   ]
+  ]
+ },
+ "skeleton": {
+  "n": "Squelette",
+  "img": "Skeleton",
+  "hp": 70,
+  "atk": 18,
+  "def": 10,
+  "mat": 5,
+  "spd": 8,
+  "exp": 26,
+  "gold": 25,
+  "acts": [
+   "attack",
+   "attack",
+   "smash"
+  ],
+  "el": {
+   "fire": 1.5,
+   "ice": 0.5
+  },
+  "drops": [
+   [
+    "potion",
+    30
+   ]
+  ]
+ },
+ "ghost": {
+  "n": "Fantôme",
+  "img": "Ghost",
+  "hp": 55,
+  "atk": 10,
+  "def": 6,
+  "mat": 16,
+  "spd": 9,
+  "exp": 28,
+  "gold": 28,
+  "acts": [
+   "curse",
+   "curse",
+   "attack"
+  ],
+  "el": {
+   "fire": 1.5
+  },
+  "drops": [
+   [
+    "ether",
+    25
+   ]
+  ]
+ },
+ "willowisp": {
+  "n": "Feu follet",
+  "img": "Willowisp",
+  "hp": 40,
+  "atk": 8,
+  "def": 4,
+  "mat": 14,
+  "spd": 11,
+  "exp": 22,
+  "gold": 20,
+  "acts": [
+   "flame",
+   "attack"
+  ],
+  "el": {
+   "fire": 0,
+   "ice": 1.6
+  },
+  "drops": [
+   [
+    "ether",
+    20
+   ]
+  ]
+ },
+ "zombie": {
+  "n": "Zombie",
+  "img": "Zombie",
+  "hp": 85,
+  "atk": 19,
+  "def": 7,
+  "mat": 3,
+  "spd": 4,
+  "exp": 30,
+  "gold": 26,
+  "acts": [
+   "attack",
+   "bite"
+  ],
+  "el": {
+   "fire": 1.5
+  },
+  "drops": [
+   [
+    "hipotion",
+    15
+   ]
+  ]
+ },
+ "dragon": {
+  "n": "Dragon des Cendres",
+  "img": "Dragon",
+  "hp": 360,
+  "atk": 27,
+  "def": 12,
+  "mat": 24,
+  "spd": 10,
+  "exp": 300,
+  "gold": 500,
+  "acts": [
+   "attack",
+   "claw",
+   "claw",
+   "breath"
+  ],
+  "el": {
+   "ice": 1.5,
+   "fire": 0.25
+  },
+  "drops": [
+   [
+    "feather",
+    100
+   ]
+  ]
+ },
+ "spider": {
+  "n": "Araignée",
+  "img": "Spider",
+  "hp": 48,
+  "atk": 14,
+  "def": 6,
+  "mat": 4,
+  "spd": 10,
+  "exp": 16,
+  "gold": 16,
+  "acts": [
+   "attack",
+   "fang"
+  ],
+  "drops": [
+   [
+    "antidote",
+    30
+   ]
+  ]
+ },
+ "hornet": {
+  "n": "Frelon",
+  "img": "Hornet",
+  "hp": 30,
+  "atk": 13,
+  "def": 3,
+  "mat": 4,
+  "spd": 14,
+  "exp": 12,
+  "gold": 12,
+  "acts": [
+   "attack",
+   "fang"
+  ],
+  "el": {
+   "fire": 1.5
+  },
+  "drops": []
+ },
+ "plant": {
+  "n": "Plante vorace",
+  "img": "Plant",
+  "hp": 62,
+  "atk": 13,
+  "def": 4,
+  "mat": 10,
+  "spd": 5,
+  "exp": 18,
+  "gold": 18,
+  "acts": [
+   "attack",
+   "acid"
+  ],
+  "el": {
+   "fire": 1.6,
+   "ice": 0.8
+  },
+  "drops": [
+   [
+    "potion",
+    35
+   ]
+  ]
+ },
+ "bandit": {
+  "n": "Bandit",
+  "img": "Bandit",
+  "hp": 58,
+  "atk": 18,
+  "def": 7,
+  "mat": 4,
+  "spd": 11,
+  "exp": 22,
+  "gold": 45,
+  "acts": [
+   "attack",
+   "attack",
+   "smash"
+  ],
+  "drops": [
+   [
+    "hipotion",
+    12
+   ]
+  ]
+ },
+ "werewolf": {
+  "n": "Loup-garou",
+  "img": "Werewolf",
+  "hp": 105,
+  "atk": 22,
+  "def": 8,
+  "mat": 5,
+  "spd": 13,
+  "exp": 34,
+  "gold": 30,
+  "acts": [
+   "attack",
+   "claw",
+   "bite"
+  ],
+  "el": {
+   "thunder": 1.3
+  },
+  "drops": [
+   [
+    "hipotion",
+    20
+   ]
+  ]
+ },
+ "ogre": {
+  "n": "Ogre",
+  "img": "Ogre",
+  "hp": 280,
+  "atk": 23,
+  "def": 10,
+  "mat": 6,
+  "spd": 6,
+  "exp": 130,
+  "gold": 160,
+  "acts": [
+   "attack",
+   "smash",
+   "smash"
+  ],
+  "el": {
+   "ice": 1.3
+  },
+  "drops": [
+   [
+    "hipotion",
+    100
+   ]
+  ]
+ },
+ "minotaur": {
+  "n": "Minotaure",
+  "img": "Minotaur",
+  "hp": 400,
+  "atk": 26,
+  "def": 12,
+  "mat": 8,
+  "spd": 9,
+  "exp": 220,
+  "gold": 260,
+  "acts": [
+   "attack",
+   "claw",
+   "smash"
+  ],
+  "el": {
+   "thunder": 1.4
+  },
+  "drops": [
+   [
+    "feather",
+    100
+   ]
+  ]
+ },
+ "monstre1": {
+  "n": "??????",
+  "img": "Captain",
+  "hp": 10,
+  "atk": 15,
+  "def": 10,
+  "mat": 4,
+  "spd": 6,
+  "exp": 0,
+  "gold": 10,
+  "acts": [
+   "attack"
+  ],
+  "drops": [
+   [
+    "potion",
+    10
+   ],
+   [
+    "hipotion",
+    10
+   ],
+   [
+    "ether",
+    10
+   ],
+   [
+    "antidote",
+    10
+   ],
+   [
+    "feather",
+    10
+   ],
+   [
+    "ring",
+    10
+   ]
+  ]
+ }
+}

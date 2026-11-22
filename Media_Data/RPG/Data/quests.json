@@ -1,0 +1,38 @@
+{
+ "sage": {
+  "n": "Le sage d’Aldéran",
+  "d": "Le sage veut que vous récupériez la clé de la caverne.",
+  "start": "quest",
+  "steps": [
+   {
+    "text": "Vaincre l’ogre de la forêt",
+    "sw": "ogre"
+   },
+   {
+    "text": "Recevoir la clé de l’ermite",
+    "sw": "key"
+   },
+   {
+    "text": "Vaincre le minotaure",
+    "sw": "mino"
+   }
+  ],
+  "done": "mino"
+ },
+ "dragon": {
+  "n": "Le dragon des cendres",
+  "d": "Le dragon dort au fond de la crypte.",
+  "start": "mino",
+  "steps": [
+   {
+    "text": "Descendre dans la crypte",
+    "sw": "mino"
+   },
+   {
+    "text": "Vaincre le dragon",
+    "sw": "dragon"
+   }
+  ],
+  "done": "dragon"
+ }
+}
