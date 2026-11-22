@@ -1,0 +1,251 @@
+{
+ "name": "Ma tente",
+ "bgm": "Town2",
+ "ground": [
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff",
+  "fffffffffffff"
+ ],
+ "objects": [
+  "τςςςςςςςςςςςχ",
+  "ψ.......WW..φ",
+  "ψMMM......jjφ",
+  "ψNNN........φ",
+  "ψ.........z.φ",
+  "ψ........zqzφ",
+  "ψ.........z.φ",
+  "ψ...........φ",
+  "σςςςςςωςςςςςυ"
+ ],
+ "events": [
+  {
+   "x": 6,
+   "y": 8,
+   "pages": [
+    {
+     "tr": "touch",
+     "c": [
+      [
+       "tp",
+       "village",
+       18,
+       5,
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 6,
+   "y": 7,
+   "pages": [
+    {
+     "if": {
+      "nsw": "camp_ok"
+     },
+     "tr": "auto",
+     "c": [
+      [
+       "say",
+       "",
+       "Une tente laissée vide par les anciens du hameau… Sur la couche, une pierre bleue luit doucement."
+      ],
+      [
+       "item",
+       "stone"
+      ],
+      [
+       "say",
+       "",
+       "Une Pierre de rappel ! Où que vous soyez, utilisez-la depuis le sac pour revenir ici."
+      ],
+      [
+       "say",
+       "",
+       "Peut-être que des habitants viendront s’y installer au fil de votre voyage…"
+      ],
+      [
+       "sw",
+       "camp_ok"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "wander": 1,
+   "pages": [
+    {
+     "c": []
+    },
+    {
+     "if": {
+      "sw": "Foret_Murmurante"
+     },
+     "s": [
+      "People2",
+      6
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Sylve",
+       "Les murmures de la forêt m’ont suivie jusqu’ici… Je me suis installée dans votre tente, j’espère que ça ne vous dérange pas.",
+       [
+        "People2",
+        6
+       ]
+      ],
+      [
+       "say",
+       "Sylve",
+       "Je prépare des remèdes avec ce que je trouve. Servez-vous.",
+       [
+        "People2",
+        6
+       ]
+      ],
+      [
+       "shop",
+       [
+        "antidote",
+        "ether",
+        "feather"
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 4,
+   "y": 6,
+   "wander": 1,
+   "pages": [
+    {
+     "c": []
+    },
+    {
+     "if": {
+      "sw": "ogre"
+     },
+     "s": [
+      "People3",
+      5
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Mira",
+       "L’ogre est tombé ? Alors je peux enfin cueillir mes champignons en paix. Merci à vous !",
+       [
+        "People3",
+        5
+       ]
+      ],
+      [
+       "say",
+       "Mira",
+       "Ici, c’est chez vous. Revenez quand vous voulez, ma soupe vous attendra.",
+       [
+        "People3",
+        5
+       ]
+      ]
+     ]
+    },
+    {
+     "s": [
+      "People3",
+      5
+     ],
+     "tr": "action",
+     "if": {
+      "sw": "mino"
+     },
+     "c": [
+      [
+       "say",
+       "Mira",
+       "Le minotaure aussi ?! On parle de vous jusque dans les plaines.",
+       [
+        "People3",
+        5
+       ]
+      ],
+      [
+       "say",
+       "Mira",
+       "Gardez votre Pierre de rappel sous la main : un tour au camp, et vous voilà de retour.",
+       [
+        "People3",
+        5
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "wander": 1,
+   "pages": [
+    {
+     "c": []
+    },
+    {
+     "if": {
+      "sw": "mino"
+     },
+     "s": [
+      "People2",
+      4
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Brask",
+       "Le minotaure est vaincu, alors la route des mines est rouverte. Ma forge aussi !",
+       [
+        "People2",
+        4
+       ]
+      ],
+      [
+       "say",
+       "Brask",
+       "Je n’ai pas grand-chose, mais c’est du solide.",
+       [
+        "People2",
+        4
+       ]
+      ],
+      [
+       "shop",
+       [
+        "sword1",
+        "dagger",
+        "staff",
+        "tunic",
+        "mail"
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

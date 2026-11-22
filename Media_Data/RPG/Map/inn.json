@@ -1,0 +1,31 @@
+{
+ "name":"Auberge",
+ "bgm":"Town2",
+ "ground":[
+  "fffffffffff",
+  "fffffffffff",
+  "fffffffffff",
+  "fffffffffff",
+  "fffffffffff",
+  "fffffffffff",
+  "fffffffffff",
+  "fffffffffff"
+ ],
+ "objects":[
+  "τςςςςςςςςςχ",
+  "ψ.......WWφ",
+  "ψMMM....jjφ",
+  "ψNNN......φ",
+  "ψ..^^^^^z.φ",
+  "ψ......zqzφ",
+  "ψ.......z.φ",
+  "σςςςςωςςςςυ"
+ ],
+ "events":[
+  {"x":5,"y":3,"pages":[{"s":["People3",2],"tr":"action","c":[["say","Aubergiste","Une nuit de repos coûte 20 pièces d’or.",["People3",2]],["ask",["Se reposer (20 po)","Non merci"],[[["if",{"gold":20},[["gold",-20],["me","Inn"],["fade",1],["wait",1800],["heal"],["fade",0],["say","Aubergiste","Bien dormi ? Vous voilà en pleine forme !",["People3",2]]],[["say","Aubergiste","Il vous manque quelques pièces, désolé.",["People3",2]]]]],[["say","Aubergiste","À bientôt !",["People3",2]]]]]]}]},
+  {"x":9,"y":5,"dir":"left","d":"left","pages":[{"s":["Actor2",2],"d":"left","tr":"action","c":[["say","Kael","Tu pars chasser le dragon ? Je connais la caverne mieux que personne.",["Actor2",2]],["ask",["Recruter Kael","Pas maintenant"],[[["join","kael"],["sw","kael"]],[["say","Kael","Tu sais où me trouver.",["Actor2",2]]]]]]},{"if":{"sw":"kael"}}]},
+  {"x":9,"y":3,"pages":[{"s":["!Chest",0],"f":0,"tr":"action","c":[["se","Chest"],["sw","i1"],["item","ether",2]]},{"if":{"sw":"i1"},"s":["!Chest",0],"f":2,"tr":"action","c":[["say","","Le coffre est vide."]]}]},
+  {"x":5,"y":7,"pages":[{"tr":"touch","c":[["tp","village",5,6,0]]}]},
+  {"x":5,"y":4,"pages":[{"c":[["say","Aubergiste","Une nuit de repos coûte 20 pièces d’or.",["People3",2]],["ask",["Se reposer (20 po)","Non merci"],[[["if",{"gold":20},[["gold",-20],["me","Inn"],["fade",1],["heal"],["wait",1800],["fade",0]],[["say","Aubergiste","Il vous manque quelques pièces, désolé.",["People3",2]]]]],[["say","Aubergiste","À bientôt !",["People3",2]]]]]],"tr":"action","d":"down"}]}
+ ]
+}

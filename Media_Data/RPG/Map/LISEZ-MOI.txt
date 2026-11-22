@@ -1,0 +1,36 @@
+MAP — une carte par fichier .json
+1. Copiez un fichier existant (ex: field.json) et renommez-le (ex: grotte.json).
+2. Ajoutez "grotte" dans "maps" de Data/system.json.
+3. Modifiez le fichier :
+
+   name, bgm (Audio/BGM), bgs (ambiance en boucle, optionnel), weather ("rain" "snow" "leaves", optionnel),
+   dark (1 = ambiance sombre autour du héros), bb [fond1, fond2] (Graphics/Battlebacks1 et 2),
+   enc {"r":16,"t":["groupe1","groupe2"]}  -> rencontre aléatoire ~1 pas sur r (groupes de troops.json).
+
+   ground  : lignes de texte, 1 caractère = 1 case (32px). Toutes les lignes ont la même longueur.
+   objects : même taille, par-dessus le sol. "." = vide.
+   Les caractères sont définis dans Data/system.json -> "legend" (ex: "g" herbe, "t" arbre, "W" mur).
+   Pour une nouvelle tuile : "z":[feuille, n° de tuile, 1] (1 = on ne peut pas marcher dessus).
+   Feuilles : 0 Outside_A5, 1 Outside_B, 2 Inside_A5, 3 Inside_B (voir "sheets"). N° = ligne*colonnes + colonne
+   (A5 : 8 colonnes, B : 16 colonnes, tuiles de 32px).
+
+   events : liste de {"x":..,"y":..,"pages":[...]}  (x,y en cases depuis 0, en haut à gauche)
+     Une page : {"s":["People1",0], "tr":"action", "if":{...}, "c":[commandes]}
+       s    sprite ["feuille de Graphics/Characters", n° 0-7] (ajoutez "f":0-2 pour une image fixe, ex coffre)
+       tr   "action" (touche Interagir), "touch" (on marche dessus / on le percute), "auto" (se lance seul)
+       if   conditions : {"sw":"interrupteur"} {"nsw":"interrupteur"} {"item":"objet"} {"gold":100} {"pm":3}
+       La dernière page dont la condition est vraie est active. Un événement sans "s" est traversable.
+       "wander":1 -> le PNJ se promène.  "d":"left" -> direction de départ.
+
+   COMMANDES (dans "c") :
+     ["say","Nom","Texte",["Actor1",0]]   dialogue (nom et visage facultatifs)
+     ["ask",["Oui","Non"],[[cmds si oui],[cmds si non]]]
+     ["sw","nom"] / ["sw","nom",false]    active / désactive un interrupteur
+     ["gold",50]  ["item","potion",2]  ["heal"]  ["join","kael"]
+     ["tp","carte",x,y,direction]         téléportation
+     ["battle","groupe",{"esc":false,"boss":true,"bb":["DirtCave","RockCave"]}]
+     ["shop",["potion","sword1"]]  ["if",{condition},[alors],[sinon]]
+     ["bgm","Battle1"] ["me","Fanfare1"] ["se","Chest"] ["wait",500] ["fade",1] ["fade",0]
+     ["shake",8] ["flash"] ["weather","rain"] ["ending"]
+
+   Astuce : copiez un coffre ou une sortie d'une carte existante et changez x, y et l'interrupteur.

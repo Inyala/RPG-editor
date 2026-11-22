@@ -1,0 +1,566 @@
+{
+ "name": "Hameau d’Aldéran",
+ "bgm": "Town1",
+ "ground": [
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccggggdggggggg",
+  "gggggdggggggccggggdggggggg",
+  "gggggdggggggccggggdggggggg",
+  "cccccccccccccccccccccccccc",
+  "cccccccccccccccccccccccccc",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggΡ΢GGGgg",
+  "ggGGGGggggggccgGGGgΣΤGGGgg",
+  "ggGGGGggggggccgGGGgGGGGGgg",
+  "ggGGGGggggggccgGGGgGGGGGgg",
+  "ggggggggggggccgggggggggggg",
+  "ggggggggggggccgggggggggggg"
+ ],
+ "objects": [
+  "ttttttttttttΧΧtttttttttttt",
+  "TΦΦΦΦΦΦΦΦΦΦΦ..ΦΦΦΦΦΦΦΦΦΦΦT",
+  "T................αβγ.....T",
+  "T...123..........δεζ..Q..T",
+  "T.b.456..........ηθι.....T",
+  "T.b.789...............t..T",
+  "T..................h..Φ..T",
+  "Φ..........s.....X.X.....Φ",
+  "ώ.........................",
+  "ύ.........................",
+  "t..............eeee......t",
+  "T........................T",
+  "T......y.o....UU.........T",
+  "T.....r.Y................T",
+  "T........................T",
+  "T........................T",
+  "Tttttttttttt..tttttttttttT",
+  "ΦΦΦΦΦΦΦΦΦΦΦΦΧΧΦΦΦΦΦΦΦΦΦΦΦΦ"
+ ],
+ "events": [
+  {
+   "x": 12,
+   "y": 9,
+   "pages": [
+    {
+     "if": {
+      "nsw": "intro"
+     },
+     "tr": "auto",
+     "c": [
+      [
+       "say",
+       "",
+       "Aldéran, un hameau de tentes au seuil des plaines. Depuis trois nuits, la terre gronde au nord-est…"
+      ],
+      [
+       "say",
+       "Aël",
+       "Lyra, le vieux sage nous attend près de la route.",
+       [
+        "Actor1",
+        0
+       ]
+      ],
+      [
+       "say",
+       "Lyra",
+       "Parlons-lui, puis préparons-nous : auberge, boutique… et en route.",
+       [
+        "Actor1",
+        3
+       ]
+      ],
+      [
+       "sw",
+       "intro"
+      ]
+     ]
+    },
+    {
+     "if": {
+      "sw": "intro"
+     },
+     "c": []
+    }
+   ]
+  },
+  {
+   "x": 14,
+   "y": 5,
+   "pages": [
+    {
+     "s": [
+      "People1",
+      0
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Sage",
+       "Voyageur… le dragon des cendres s’est réveillé sous la Caverne des Cendres.",
+       [
+        "People1",
+        0
+       ]
+      ],
+      [
+       "say",
+       "Sage",
+       "La porte est verrouillée. L’ermite de la Forêt Murmurante, au sud des plaines, garde la clé. M’aideras-tu ?",
+       [
+        "People1",
+        0
+       ]
+      ],
+      [
+       "ask",
+       [
+        "Oui, nous irons",
+        "Pas encore"
+       ],
+       [
+        [
+         [
+          "say",
+          "Sage",
+          "Merci. Prends garde : un ogre rôde dans la forêt.",
+          [
+           "People1",
+           0
+          ]
+         ],
+         [
+          "sw",
+          "quest"
+         ]
+        ],
+        [
+         [
+          "say",
+          "Sage",
+          "Reviens quand tu seras prêt.",
+          [
+           "People1",
+           0
+          ]
+         ]
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "s": [
+      "People1",
+      0
+     ],
+     "tr": "action",
+     "if": {
+      "sw": "quest"
+     },
+     "c": [
+      [
+       "say",
+       "Sage",
+       "L’ermite vit au fond de la Forêt Murmurante, au sud des plaines.",
+       [
+        "People1",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "s": [
+      "People1",
+      0
+     ],
+     "tr": "action",
+     "if": {
+      "sw": "key"
+     },
+     "c": [
+      [
+       "say",
+       "Sage",
+       "Tu as la clé ! La caverne est au bout des plaines, au nord-est.",
+       [
+        "People1",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "s": [
+      "People1",
+      0
+     ],
+     "tr": "action",
+     "if": {
+      "sw": "mino"
+     },
+     "c": [
+      [
+       "say",
+       "Sage",
+       "Le minotaure est tombé… le dragon dort encore plus bas, dans la crypte.",
+       [
+        "People1",
+        0
+       ]
+      ]
+     ]
+    },
+    {
+     "s": [
+      "People1",
+      0
+     ],
+     "tr": "action",
+     "if": {
+      "sw": "dragon"
+     },
+     "c": [
+      [
+       "say",
+       "Sage",
+       "Tu as vaincu le dragon ! Aldéran est sauvé, merci, héros !",
+       [
+        "People1",
+        0
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 18,
+   "y": 7,
+   "pages": [
+    {
+     "s": [
+      "People1",
+      5
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Marchand",
+       "Bienvenue ! J’ai tout ce qu’il faut avant le grand voyage.",
+       [
+        "People1",
+        5
+       ]
+      ],
+      [
+       "shop",
+       [
+        "potion",
+        "hipotion",
+        "ether",
+        "antidote",
+        "feather",
+        "sword1",
+        "dagger",
+        "staff",
+        "tunic",
+        "robe",
+        "mail"
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 8,
+   "y": 11,
+   "wander": 1,
+   "pages": [
+    {
+     "s": [
+      "People2",
+      4
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Villageoise",
+       "Les tentes tiennent bon, mais la nuit on entend le dragon ronfler…",
+       [
+        "People2",
+        4
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 21,
+   "y": 10,
+   "wander": 1,
+   "pages": [
+    {
+     "s": [
+      "People1",
+      1
+     ],
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "Fidèle",
+       "Le puits est à sec depuis que la terre tremble. Quelle époque !",
+       [
+        "People1",
+        1
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 11,
+   "y": 7,
+   "pages": [
+    {
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "",
+       "Hameau d’Aldéran — Est : Plaines des Cendres."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 22,
+   "y": 15,
+   "pages": [
+    {
+     "s": [
+      "!Chest",
+      0
+     ],
+     "f": 0,
+     "tr": "action",
+     "c": [
+      [
+       "se",
+       "Chest"
+      ],
+      [
+       "sw",
+       "v1"
+      ],
+      [
+       "item",
+       "potion",
+       3
+      ]
+     ]
+    },
+    {
+     "if": {
+      "sw": "v1"
+     },
+     "s": [
+      "!Chest",
+      0
+     ],
+     "f": 2,
+     "tr": "action",
+     "c": [
+      [
+       "say",
+       "",
+       "Le coffre est vide."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "pages": [
+    {
+     "tr": "touch",
+     "c": [
+      [
+       "tp",
+       "inn",
+       5,
+       6,
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 25,
+   "y": 8,
+   "pages": [
+    {
+     "tr": "touch",
+     "c": [
+      [
+       "tp",
+       "field",
+       1,
+       10,
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 25,
+   "y": 9,
+   "pages": [
+    {
+     "tr": "touch",
+     "c": [
+      [
+       "tp",
+       "field",
+       1,
+       11,
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "x": 12,
+   "y": 0,
+   "pages": [
+    {
+     "c": [
+      [
+       "say",
+       "",
+       "Accès interdit"
+      ]
+     ],
+     "tr": "action"
+    }
+   ]
+  },
+  {
+   "x": 13,
+   "y": 0,
+   "pages": [
+    {
+     "c": [
+      [
+       "say",
+       "",
+       "Accès interdit"
+      ]
+     ],
+     "tr": "action"
+    }
+   ]
+  },
+  {
+   "x": 0,
+   "y": 8,
+   "pages": [
+    {
+     "c": [
+      [
+       "say",
+       "",
+       "Accès interdit"
+      ]
+     ],
+     "tr": "action"
+    }
+   ]
+  },
+  {
+   "x": 0,
+   "y": 9,
+   "pages": [
+    {
+     "c": [
+      [
+       "say",
+       "",
+       "Accès interdit"
+      ]
+     ],
+     "tr": "action"
+    }
+   ]
+  },
+  {
+   "x": 13,
+   "y": 17,
+   "pages": [
+    {
+     "c": [
+      [
+       "say",
+       "",
+       "Accès interdit"
+      ]
+     ],
+     "tr": "action"
+    }
+   ]
+  },
+  {
+   "x": 12,
+   "y": 17,
+   "pages": [
+    {
+     "c": [
+      [
+       "say",
+       "",
+       "Accès interdit"
+      ]
+     ],
+     "tr": "action"
+    }
+   ]
+  },
+  {
+   "x": 18,
+   "y": 4,
+   "pages": [
+    {
+     "tr": "touch",
+     "c": [
+      [
+       "tp",
+       "camp",
+       6,
+       7,
+       3
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}
