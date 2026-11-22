@@ -1,0 +1,2 @@
+FONTS — polices. VL-Gothic-Regular.ttf est chargée par Style/style.css (@font-face "VLG").
+Pour changer de police : copiez un .ttf ici et modifiez la ligne @font-face dans Style/style.css (garder le nom VLG).
