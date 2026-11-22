@@ -1,0 +1,9 @@
+GRAPHICS — vos images (tuiles 32px, format RPG Maker VX Ace). Utilisez le nom de fichier sans .png.
+Tilesets/   feuilles de tuiles (déclarées dans Data/system.json -> sheets, utilisées via "legend")
+Characters/ sprites de marche : 4 persos par feuille (n° 0-7), 3 images x 4 directions. Préfixe $ = 1 seul perso, ! = objet
+Faces/      portraits 96x96, 8 par feuille (n° 0-7)
+Battlers/   monstres (Data/enemies.json -> img)
+Battlebacks1/2/  décors de combat (champ "bb" des cartes)
+Animations/ effets de compétences (Data/skills.json -> ani)
+System/     Window.png (style classique), IconSet.png (icônes 24px), GameOver.png
+Titles1/    fonds de l'écran titre
