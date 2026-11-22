@@ -3,14 +3,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>RPG Éditeur</title><link rel="stylesheet" href="css/editor.css"></head>
 <body>
-<header id="top"><b>🛠 RPG Éditeur</b>
-<button id="imp">📂 Ouvrir</button><button id="play1" class="on">▶ Jouer</button><button id="play2">▶ Ici</button><button id="expz">💾 .zip</button><button id="expp">💾 .rpgproj</button>
-<nav><button data-t="maps" class="on">🗺 Cartes</button><button data-t="db">📚 Base</button></nav><span id="st">Ouvrez RPG.zip ou un .rpgproj (ou glissez-le ici)</span></header>
+<header id="top"><button id="tgl" title="Afficher / masquer le panneau (cartes, propriétés, palette)">☰</button>
+<details class="mn"><summary>📁<span class="lbl"> Fichier</span></summary><div class="dd"><button id="opd">📁 Ouvrir un dossier</button><button id="imp">📂 Ouvrir un fichier</button><button id="sav" class="on">💾 Enregistrer</button><button id="exp">⬇ Exporter…</button></div></details>
+<details class="mn"><summary>▶<span class="lbl"> Jouer</span></summary><div class="dd"><button id="play1" class="on">▶ Jouer (nouvel onglet)</button><button id="play2">▶ Ici</button></div></details>
+<details class="mn"><summary>⚙<span class="lbl"> Options</span></summary><div class="dd"><button id="rob" title="Verrouiller / déverrouiller la modification des CARTES (la base de données reste toujours modifiable)">🔒 Cartes : lecture seule</button><button id="auto" title="Écrit automatiquement dans le dossier ouvert toutes les 30 s (sans dossier : brouillon du navigateur)">💾 Enregistrement auto : non</button><button id="rst" title="Réaffiche le panneau et recentre l'interface">🧭 Réinitialiser l'affichage</button></div></details>
+<button id="un" title="Annuler">↶</button><button id="rd" title="Rétablir">↷</button><button id="ext" style="display:none">📤</button><button id="expz" style="display:none">💾 .zip</button><button id="expp" style="display:none">💾 .rpgproj</button>
+<nav><button data-t="maps" class="on">🗺<span class="lbl"> Cartes</span></button><button data-t="db">📚<span class="lbl"> Base</span></button></nav><span id="st">Ouvrez RPG.zip ou un .rpgproj (ou glissez-le ici)</span></header>
 <main id="maps"><aside id="side"><div id="list"></div><div id="props"></div><div id="pal"></div></aside>
 <section id="view"><div id="bar"></div><div id="scroll"><canvas id="cv" class="nopan"></canvas></div></section></main>
 <main id="db" hidden><aside><select id="dbf"></select><div class="row" id="dbb"></div><div id="dbl"></div></aside>
 <section><div id="dbt" class="form"></div></section></main>
 <dialog id="dlg"></dialog><dialog id="play"></dialog><input type="file" id="file" accept=".zip,.rpgproj" hidden>
-<script src="js/zip.js"></script><script src="js/project.js"></script><script src="js/maps.js"></script>
+<script src="js/zip.js"></script><script src="js/project.js"></script><script src="js/notify.js"></script><script src="js/folder.js"></script><script src="js/maps.js"></script><script src="js/tiles.js"></script>
 <script src="js/form.js"></script><script src="js/events.js"></script><script src="js/data.js"></script><script src="js/play.js"></script><script src="js/app.js"></script>
 </body></html>

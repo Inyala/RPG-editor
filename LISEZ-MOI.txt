@@ -5,13 +5,52 @@ Les deux se réimportent. Les fichiers non modifiés (images, sons) sont recopi�
 
 FICHIERS
  js/zip.js      lecture/écriture ZIP (sans bibliothèque)      js/project.js  projet : chargement, images, export
- js/maps.js     éditeur de cartes, palette, propriétés         js/events.js   éditeur d'événements (pages, conditions, commandes)
+ js/maps.js     éditeur de cartes, palette des récents, propriétés         js/events.js   éditeur d'événements (pages, conditions, commandes)
  js/data.js     base de données (JSON par entrée)              js/app.js      onglets, ouverture, export
  css/editor.css style (responsive mobile)
 Pour ajouter une commande d'événement : une ligne dans CMD (events.js) + son « case » dans exec de Script/map.js du jeu.
 
-OUVERTURE AUTOMATIQUE : placez votre projet à côté de index.html sous le nom projet.rpgproj (ou RPG.zip) : il s'ouvre tout seul.
+JOUER SANS SERVEUR : Media_Data/RPG/index.html s'ouvre directement (double-clic / navigateur du téléphone) grâce à Script/data.js, regénéré automatiquement à chaque 💾 Enregistrer / export / 📤 Extraire, ou par « python3 make_manifest.py ».
+PROJET PAR DÉFAUT (serveur) : à l'ouverture, l'éditeur charge directement le DOSSIER Media_Data/RPG/ (fichier par fichier, aucun zip ni projet compilé, donc aucun souci de compatibilité serveur : pas de requêtes Range). Il lit la liste des fichiers dans Media_Data/manifest.json : après avoir ajouté / supprimé / renommé des fichiers dans Media_Data/RPG/, relancez « python3 make_manifest.py » (à côté de index.html). Les modifications de l'éditeur sont gardées en brouillon dans le navigateur ; « 💾 .zip » ou « 📤 Extraire » pour les récupérer.
+ANCIENNE OUVERTURE AUTOMATIQUE (repli si Media_Data est absent) : placez votre projet à côté de index.html sous le nom projet.rpgproj (ou RPG.zip) : il s'ouvre tout seul.
 Sinon l'éditeur rouvre le dernier projet ouvert + vos modifications (brouillon sauvegardé dans le navigateur). Exportez pour obtenir le fichier final.
 ▶ Jouer / ▶ Ici : teste le jeu avec vos modifications sans exporter (▶ Ici démarre sur la dernière case touchée). js/play.js
 Ouverture auto : le projet est lu par morceaux (requêtes HTTP Range), jamais chargé en entier. Si votre serveur local ne gère pas Range, utilisez « Ouvrir ».
 Les projets de plus de 80 Mo ne sont pas recopiés dans la mémoire du navigateur (évite les plantages) : rouvrez-les via « Ouvrir » ou projet.rpgproj ; le brouillon est proposé à la restauration.
+
+MESSAGES EN GRAND : js/notify.js affiche le chargement, les erreurs, les confirmations et les export dans une fenêtre centrée (alert() y est redirigé).
+DOUBLE-CLIC SUR index.html (file://) : le navigateur interdit la lecture automatique d'un fichier voisin. Ouvrez le projet UNE fois avec « Ouvrir » (Chrome / Edge) : il est mémorisé et rouvert tout seul ensuite (le navigateur peut redemander l'accord en un clic). Autre solution : un serveur local avec projet.rpgproj à côté de index.html.
+
+MODE DOSSIER (Chrome / Edge) : « 📁 Dossier » ouvre le dossier du jeu (celui qui contient Data/, Map/, Graphics/…) au lieu d'un .zip. Ouverture quasi instantanée (les images sont lues à la demande), le dossier est mémorisé et rouvert tout seul. « 💾 Enregistrer » (ou Ctrl+S) écrit directement Data/*.json et Map/*.json dans le dossier. Sans dossier ouvert, ce bouton exporte un .zip. js/folder.js.
+BASE DE DONNÉES : visage, sprite (feuille + n° avec aperçu) et butins des ennemis sont désormais des menus déroulants (ils étaient restés en champ texte).
+
+TUILES SF_* ET World_C : ces feuilles (768 px de large) ont des tuiles de 48 px ; elles étaient découpées en 32 px (donc faussées). Découpe corrigée dans l'éditeur ET dans le moteur du jeu (Script/map.js) ; les anciennes tuiles de la légende sont converties automatiquement (une seule fois, marqueur « tiles48 » dans Data/system.json). js/tiles.js.
+APERÇU DES ÉVÉNEMENTS : sur la carte, les événements s'affichent comme dans le jeu (sprite, direction, ombre, page active au départ). Bouton « 👁 Aperçu jeu » pour revenir aux cadres bleus. Les événements sans image gardent leur cadre bleu.
+EXTRAIRE (📤) : écrit tout le projet ouvert (Data, Map, Script, Style, index.html, Graphics, Audio, Fonts…) dans un dossier, avec vos modifications, puis propose de travailler dedans.
+
+CONTENU DE CE DOSSIER
+ index.html, css/, js/      l'éditeur
+ Media_Data/RPG/            votre jeu, dézippé (Data, Map, Script, Style, Graphics, Audio, Fonts, index.html, Lancer.bat…)
+PREMIER LANCEMENT : ouvrez index.html (Chrome ou Edge) -> « 📁 Dossier » -> choisissez le dossier Media_Data. Il est mémorisé : ensuite l'éditeur le rouvre tout seul. 💾 Enregistrer (Ctrl+S) écrit directement dans Media_Data.
+
+OBJET DE TÉLÉPORTATION : dans Base de données > Objets, un objet peut avoir un champ « Téléporte à l’utilisation » (go : carte, colonne x, ligne y, direction). Utilisé depuis le sac, il téléporte directement (sans choisir de membre) ; il est refusé si on est déjà sur cette carte. Mettre le type « Objet clé » pour qu'il ne soit ni consommé ni vendu. Exemple fourni : la Pierre de rappel (ramène à la carte « camp »).
+DÉMO – LE CAMP : la tente vide du village (en haut à droite) mène à la carte « camp ». Au premier passage on y trouve la Pierre de rappel. Trois PNJ s'y installent au fil du jeu (interrupteurs) : Sylve (visite de la Forêt Murmurante), Mira (ogre vaincu), Brask (minotaure vaincu). Un PNJ qui se balade = événement avec « wander », une page vide d'abord puis une page conditionnée par l'interrupteur de déblocage.
+
+OBJETS : type « Consommable infini » (jamais consommé) ; champ « Événement à l’utilisation / consommation » (commandes d’événement) ; un consommable est détruit puis son événement s’exécute. QUÊTES et menu : Base de données > 📜 Quêtes ; entrées du menu masquées au départ : Système > menuHide.
+
+NOUVEAUTÉS (v3)
+ BASE DE DONNÉES DÉBLOQUÉE : l'onglet Système plantait (trou dans la liste SRC de form.js) et le cadenas bloquait le menu de la base ; corrigé. Le cadenas ne concerne plus que les cartes.
+ SAUVEGARDE : commande d'événement « 💾 Ouvrir le menu Sauvegarder » (ouvre l'écran des fichiers) ; menu ⚙ Options > « Enregistrement auto » (toutes les 30 s dans le dossier ouvert).
+ ÉCRAN DE FIN : Base > Système > « Écran de fin » (titre, sous-titre, couleurs, tailles, position, durée, image de fond, jingle). Lu par Script/main.js et map.js.
+ APERÇUS : écoute (▶ ■) sur toutes les musiques / ambiances / sons / jingles ; miniatures pour décors de combat, fond du titre / de fin, visages des messages, images d'ennemis, animations.
+ INTERFACE : plus de zoom forcé ni de zone hors écran ; barre d'outils défilante ; bouton ☰ pour masquer le panneau ; mise en page compacte pour téléphone ; menus ⚙ Options (cadenas, enregistrement auto, réinitialiser l'affichage).
+
+NOUVEAUTÉS (v4)
+ BASE DE DONNÉES : le bouton 💾 Enregistrer n'est plus grisé quand les cartes sont verrouillées (seules les cartes le sont). Dans une quête, le champ « Visible quand l’interrupteur est actif » portait à tort le nom « Départ » : corrigé, et la quête a maintenant son propre formulaire (nom, description, étapes, interrupteurs facultatifs).
+ PRESETS / PRÉCEPTES SUPPRIMÉS : plus de menu Base > Préceptes, plus de presets, de 🧩 Planche, de ▦ Multi ni de 🧱 Tuile+ dans la palette.
+ PALETTE = RÉCENTS : liste de tous les récents (le dernier utilisé en premier), avec une icône par sorte : 🔹 simple (1 tuile), 🧩 groupe (2 à 6), 🏰 grand (7 et plus) ; filtre Tous / Simples / Groupes / Grands. « ＋ Tuiles… » : toucher une tuile ou glisser un rectangle sur une planche -> un menu s'ouvre : Traversable / Bloquant, ☠ dégâts par pas, puis ✔ Valider. « ⚙ Solidité / dégâts » règle à nouveau la sélection ; « 🗺 De la carte » ajoute les tuiles déjà posées. Les récents sont gardés dans le navigateur.
+ BOUTONS EN DOUBLE RETIRÉS : ↶ ↷ (gardés en haut), « Extraire en dossier » (reste dans ⬇ Exporter…).
+ OBJETS : Type « Consommable » ou « Consommable infini » ; case « Utilisable en combat » ; « Script à l’utilisation » = commandes d'événement (en combat, téléportation / combat / boutique / menus / fin du jeu sont ignorés). Un objet sans effet PV/PM ne demande pas de cible en combat.
+ ÉVÉNEMENTS : le sprite se choisit comme pour les personnages (miniature + feuille + n°) ; les icônes emoji sont supprimées. Nouvelles commandes 📜 Quête : commencer / mettre à jour (cocher ou décocher une étape) / terminer / retirer ; nouvelles conditions « Quête commencée » / « Quête terminée » ; la commande « Ouvrir le menu » permet de choisir le menu (Quêtes, Objets, Équipement…). Une quête sans interrupteur ne démarre que par la commande « Commencer » ; une quête avec interrupteur garde l'ancien comportement.
+
+MENU QUÊTES (jeu) : grande fenêtre — liste des quêtes à gauche, détail à droite (description, étapes cochées ✔, étape en cours ▶, barre de progression). Le texte réduit sa taille tout seul pour tout faire tenir. Code : questMenu / qDetail dans Media_Data/RPG/Script/menus.js.
