@@ -1,0 +1,37 @@
+MOTEUR RPG-HTML — 2D style RPG Maker
+=====================================
+
+LANCER LE JEU — SANS SERVEUR (PC et mobile)
+  Ouvrez simplement index.html dans le navigateur (double-clic, ou « Ouvrir avec » le navigateur du téléphone).
+  Les données (Data/ + Map/) sont embarquées dans Script/data.js : plus besoin de serveur ni de .bat / .sh.
+  Mobile : ouvrez le dossier avec Firefox, ou avec Chrome via file:///…/index.html. Si votre gestionnaire de fichiers
+  ouvre la page « à plat » (adresse content://) et que le jeu reste blanc, passez par l'adresse file:// du navigateur
+  ou hébergez le dossier (GitHub Pages, itch.io : simple envoi du dossier, aucun logiciel).
+  Si vous modifiez un .json À LA MAIN, régénérez data.js (python3 make_manifest.py, fourni avec l'éditeur) ; l'éditeur le fait tout seul.
+  Sur un serveur, le jeu lit directement les .json (data.js ne sert que de secours) : F5 suffit.
+
+LANCER LE JEU — AVEC SERVEUR (facultatif)
+  Windows     : double-clic sur Lancer.bat
+  Mac / Linux : ./lancer.sh   (ou: python3 -m http.server 8080 puis http://localhost:8080)
+  Mobile      : lancez le serveur sur le PC, puis ouvrez http://IP-DU-PC:8080 sur le téléphone (même Wi-Fi),
+                ou envoyez tout le dossier sur un hébergement statique (itch.io, GitHub Pages...).
+  Pourquoi un serveur ? Les navigateurs interdisent de lire les fichiers .json en double-clic sur index.html.
+
+STRUCTURE (chaque dossier a son LISEZ-MOI.txt)
+  Data/     base de données en JSON (héros, objets, compétences, ennemis, groupes, système)
+  Map/      une carte = un fichier .json (tuiles en texte + événements)
+  Script/   le moteur, découpé en plusieurs fichiers
+  Style/    CSS de la page
+  Graphics/ Audio/ Fonts/   vos ressources (rien n'est supprimé)
+
+CRÉER SON RPG EN 6 ÉTAPES
+  1. Data/actors.json   : créez vos héros (stats, compétences par niveau, équipement).
+  2. Data/items.json, skills.json, enemies.json, troops.json : objets, sorts, monstres, groupes de monstres.
+  3. Map/ma_carte.json  : dessinez la carte en texte, ajoutez PNJ, coffres, portes (événements).
+  4. Data/system.json   : ajoutez l'id de la carte dans "maps", réglez départ, groupe et musique de titre.
+  5. Lancez le jeu, testez, corrigez : rechargez simplement la page (F5).
+  6. Les sauvegardes (8 fichiers) et les réglages sont stockés dans le navigateur.
+
+COMMANDES
+  Clavier : flèches / ZQSD, Entrée ou Espace = valider/interagir, Échap/X = annuler, M = menu, Maj = courir
+  (modifiables dans Réglages). Manette : croix, A, B, Start. Mobile : stick tactile, bouton Interagir, bouton ☰.
