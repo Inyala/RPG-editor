@@ -1,0 +1,5 @@
+AUDIO — format .ogg. On écrit le nom sans extension.
+BGM/  musiques de carte et de combat (champ "bgm")        BGS/  ambiances en boucle (champ "bgs")
+ME/   jingles courts (commande "me")                       SE/   bruitages (commande "se", champ "se" des compétences)
+Volumes réglables dans le jeu : Réglages -> général, musique, ambiance, effets, jingles.
+Safari ancien ne lit pas l'ogg : le jeu fonctionne sans le son.
