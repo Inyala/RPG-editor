@@ -1,0 +1,15 @@
+SCRIPT — le moteur (JavaScript), un rôle par fichier. Ordre de chargement : voir index.html.
+core.js    constantes, ADAPTATION À L'ÉCRAN (fit : VW/VH/K, zone d'interface W×H centrée), réglages, audio, entrées clavier/MANETTE (remappable)/tactile/souris
+ui.js      fenêtres, texte, boutons, dialogues (say), listes de choix (pick) — thème moderne ou classique
+fx.js      effets : pluie/neige/feuilles, obscurité, secousse, flash
+state.js   état de la partie, stats, niveaux, fondus
+map.js     chargement des cartes, déplacements, événements, commandes, stick/boutons mobiles, bulle d'interaction
+battle.js  combats au tour par tour (formules de dégâts : fonction calc)
+menus.js   boutique, menu, objets, équipement, statut, 8 sauvegardes, réglages, remappage des touches, tutoriel
+main.js    ÉCRAN DE CHARGEMENT (barre de progression, préchargement des images), écran titre, boucle principale
+Pour ajouter une commande d'événement : ajoutez un "case" dans la fonction exec de map.js.
+Pour changer la formule de dégâts : fonction calc dans battle.js. Courbe d'XP : fonction cum dans state.js.
+
+NOUVEAUTÉS : interface adaptative (W,H = zone d'interface 640x480 toujours visible ; VW,VH = canvas réel, plein écran, haute résolution),
+écran de chargement, temps de jeu hh:mm:ss, Toujours courir, Se rappeler la commande, équipe à la suite, barres de défilement glissables,
+manette configurable (réglages > Commandes manette), vibrations. Réglages sauvegardés : Toujours courir=always, Se rappeler=remember, cortège=follow.
