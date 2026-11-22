@@ -1,0 +1,10 @@
+@font-face{font-family:VLG;src:url(../Fonts/VL-Gothic-Regular.ttf)}
+html,body{margin:0;height:100%;background:#000;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none}
+body{position:fixed;inset:0;width:100%;height:100%;height:100dvh}
+/* Le canvas est dimensionné en JS (core.js, fonction fit) : il épouse l'écran, sans bandes noires. */
+#c{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#000;touch-action:none;display:block}
+/* Écran de démarrage HTML : visible dès l'ouverture, avant même que les scripts ne soient chargés */
+#boot{position:fixed;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(ellipse at 50% 40%,#1b2a55,#05060f 75%);color:#cfe0ff;font:600 18px/1.3 system-ui,sans-serif;letter-spacing:.04em;transition:opacity .35s}
+#boot.off{opacity:0;pointer-events:none}
+#boot i{width:44px;height:44px;border-radius:50%;border:4px solid rgba(150,180,255,.25);border-top-color:#9cf;animation:sp 0.9s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}

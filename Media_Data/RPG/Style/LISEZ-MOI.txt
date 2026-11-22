@@ -1,0 +1,3 @@
+STYLE — style.css : charge la police (Fonts/) et met le canvas 640x480 à l'échelle de l'écran (4:3).
+L'interface du jeu (menus, boutons tactiles, sauvegardes) est dessinée dans le canvas : voir Script/ui.js.
+Couleurs/arrondis des fenêtres : fonction win() de Script/ui.js.
